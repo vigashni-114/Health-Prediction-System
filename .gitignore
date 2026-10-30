@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Secrets
+.env
+.env.*
+
+# Local database and backups
+patients.db
+*.db-journal

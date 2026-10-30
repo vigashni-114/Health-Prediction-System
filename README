@@ -1,0 +1,33 @@
+# Health Prediction System
+
+A web-based application built using Python, Flask, SQLite, HTML, and CSS.
+
+## Features
+- Add patient records
+- View patient records
+- Edit existing records
+- Delete patient records
+- Generate AI-based health remarks using the Gemini API
+
+## Technologies Used
+- Python
+- Flask
+- SQLite
+- HTML and CSS
+- Google Gemini API
+
+## Installation
+1. Install Python.
+2. Install the required packages:
+
+   `python -m pip install -r requirements.txt`
+
+3. Set the `GEMINI_API_KEY` environment variable.
+4. Run the application:
+
+   `python app.py`
+
+5. Open the local URL shown in the terminal.
+
+## Note
+AI-generated remarks are for educational demonstration only and are not a medical diagnosis.

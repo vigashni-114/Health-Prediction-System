@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Patient</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="page-header">
+    <h1>Health Prediction System</h1>
+    <p>Update Patient Details</p>
+</header>
+
+<main class="container">
+    <section class="form-card">
+        <h2>Edit Patient Details</h2>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% for category, message in messages %}
+                <p class="message {{ category }}">{{ message }}</p>
+            {% endfor %}
+        {% endwith %}
+
+        <form method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" value="{{ patient.name }}" required>
+
+            <label for="dob">Date of Birth (DD/MM/YYYY)</label>
+            <input type="text" id="dob" name="dob" value="{{ patient.dob }}" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" value="{{ patient.email }}" required>
+
+            <label for="glucose">Glucose</label>
+            <input type="number" id="glucose" name="glucose" value="{{ patient.glucose }}" step="any" required>
+
+            <label for="haemoglobin">Haemoglobin</label>
+            <input type="number" id="haemoglobin" name="haemoglobin" value="{{ patient.haemoglobin }}" step="any" required>
+
+            <label for="cholesterol">Cholesterol</label>
+            <input type="number" id="cholesterol" name="cholesterol" value="{{ patient.cholesterol }}" step="any" required>
+
+            <button type="submit">Update Patient</button>
+        </form>
+
+        <p><a href="{{ url_for('home') }}">Back to Patient Records</a></p>
+    </section>
+</main>
+
+</body>
+</html>
